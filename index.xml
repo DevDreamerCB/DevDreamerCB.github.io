@@ -7,7 +7,29 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>BoChen</copyright>
-        <lastBuildDate>Sat, 24 May 2025 18:15:42 +0800</lastBuildDate><atom:link href="https://DevDreamerCB.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 24 May 2025 19:35:22 +0800</lastBuildDate><atom:link href="https://DevDreamerCB.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Image</title>
+        <link>https://DevDreamerCB.github.io/p/image/</link>
+        <pubDate>Sat, 24 May 2025 19:35:22 +0800</pubDate>
+        
+        <guid>https://DevDreamerCB.github.io/p/image/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;https://DevDreamerCB.github.io/p/image/pics/1.jpg&#34;
+	width=&#34;578&#34;
+	height=&#34;323&#34;
+	srcset=&#34;https://DevDreamerCB.github.io/p/image/pics/1_hu_9dc9ad384a7608bf.jpg 480w, https://DevDreamerCB.github.io/p/image/pics/1_hu_6eba850b5b577895.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;签名&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;429px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Cb</title>
         <link>https://DevDreamerCB.github.io/p/cb/</link>
         <pubDate>Sat, 24 May 2025 18:15:42 +0800</pubDate>
@@ -18,7 +40,7 @@
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://realpython.com/python-classes/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Classes&lt;/a&gt; allow you to create user-defined data structures. Classes define functions called &lt;strong&gt;methods&lt;/strong&gt;, which identify the behaviors and actions that an object created from the class can perform with its data.&lt;/p&gt;
 &lt;p&gt;对象就是带着一些东西（比如函数）的物体，通过”.”语法访问这些东西&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://DevDreamerCB.github.io/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://DevDreamerCB.github.io/pics/image.png&#34;
 	
 	
 	
