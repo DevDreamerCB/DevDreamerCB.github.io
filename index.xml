@@ -7,7 +7,195 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>BoChen</copyright>
-        <lastBuildDate>Sat, 24 May 2025 19:59:11 +0800</lastBuildDate><atom:link href="https://DevDreamerCB.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 26 May 2025 20:17:24 +0800</lastBuildDate><atom:link href="https://DevDreamerCB.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>MS_HS_fusion</title>
+        <link>https://DevDreamerCB.github.io/p/ms_hs_fusion/</link>
+        <pubDate>Mon, 26 May 2025 20:17:24 +0800</pubDate>
+        
+        <guid>https://DevDreamerCB.github.io/p/ms_hs_fusion/</guid>
+        <description>&lt;h2 id=&#34;fusformer&#34;&gt;Fusformer:
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/J-FHu/Fusformer&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/J-FHu/Fusformer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://DevDreamerCB.github.io/index.assets/image-20250527082852544.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250527082852544&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;给了1000轮时候的预训练权重，可以直接测试&lt;/p&gt;
+&lt;p&gt;我自己也有50-500轮的训练权重&lt;/p&gt;
+&lt;p&gt;20张固定的CAVE中的图片训练，11张CAVE中的图片测试，10张Harvard图片测试&lt;/p&gt;
+&lt;h2 id=&#34;msst-net&#34;&gt;MSST-Net:
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/jx-mzc/MSST-Net&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/jx-mzc/MSST-Net&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://DevDreamerCB.github.io/index.assets/image-20250527083816619.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250527083816619&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;同时提取空间信息和光谱信息&lt;/p&gt;
+&lt;p&gt;没有给权重，但给了训练代码，&lt;strong&gt;参数量巨大&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;CAVE上预训练，分别在CAVE和Harvard上微调&lt;/p&gt;
+&lt;h2 id=&#34;psrt&#34;&gt;PSRT:
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/shangqideng/PSRT?tab=readme-ov-file&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/shangqideng/PSRT?tab=readme-ov-file&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://DevDreamerCB.github.io/index.assets/image-20250527082353833.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250527082353833&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://DevDreamerCB.github.io/index.assets/image-20250527082755747.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250527082755747&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;仓库给了训练好的权重，应该可以直接测试&lt;/p&gt;
+&lt;p&gt;CAVE上固定20张图片训练，11张图片测试&lt;/p&gt;
+&lt;p&gt;Harvard上固定10张图片训练，10张图片测试&lt;/p&gt;
+&lt;h2 id=&#34;hmf-former&#34;&gt;HMF-Former:
+&lt;/h2&gt;&lt;p&gt;无代码&lt;/p&gt;
+&lt;h2 id=&#34;hypertransformer&#34;&gt;HyperTransformer:
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/wgcban/HyperTransformer&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/wgcban/HyperTransformer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://DevDreamerCB.github.io/index.assets/image-20250527111224376.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250527111224376&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;使用纹理特性，空间信息和光谱信息的交互，&lt;/p&gt;
+&lt;p&gt;数据集不匹配，没有训练好的权重&lt;/p&gt;
+&lt;p&gt;解决的问题是pansharpening: Pansharpening aims to fuse a registered high-resolution panchromatic image (PAN) with a low-resolution hyperspectral image (LR-HSI) to generate an enhanced HSI with high spectral and spatial resolution.&lt;/p&gt;
+&lt;p&gt;pansharpening用黑白图和多光谱图片，只能产生多光谱图像，不能产生高光谱图像&lt;/p&gt;
+&lt;h2 id=&#34;mct-net&#34;&gt;MCT-Net:
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/wxy11-27/MCT-Net&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/wxy11-27/MCT-Net&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://DevDreamerCB.github.io/index.assets/image-20250527145026403.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250527145026403&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;空间信息和光谱信息的交互，模型结构比较复杂，参数量巨大&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://DevDreamerCB.github.io/index.assets/image-20250527145204944.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250527145204944&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;没有给模型权重，数据集并非CAVE和Harvard&lt;/p&gt;
+&lt;h2 id=&#34;dctransformer&#34;&gt;DCTransformer:
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/qingma2016/DCTransformer&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/qingma2016/DCTransformer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://DevDreamerCB.github.io/index.assets/image-20250527152110485.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250527152110485&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;训练、测试要两张卡（？）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://DevDreamerCB.github.io/index.assets/image-20250527152220089.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250527152220089&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;采用swin-Transformer的block&lt;/p&gt;
+&lt;p&gt;给出了200轮的权重，给了训练和测试代码，数据集一致&lt;/p&gt;
+&lt;h2 id=&#34;ngst-net&#34;&gt;NGST-Net:
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/zsspo/NGST_fusion&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/zsspo/NGST_fusion&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://DevDreamerCB.github.io/index.assets/image-20250527154838714.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250527154838714&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;基于swin-Transformer，只有模型代码，没有给出训练、测试代码，数据集倒是能匹配上&lt;/p&gt;
+&lt;h2 id=&#34;mimo-sst&#34;&gt;MIMO-SST
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Freelancefangjian/MIMO-SST&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Freelancefangjian/MIMO-SST&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://DevDreamerCB.github.io/index.assets/image-20250527160022748.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250527160022748&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;数据集有CAVE，但无Harvard，混合空间信息和光谱信息的Transformer&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://DevDreamerCB.github.io/index.assets/image-20250527160214457.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250527160214457&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;uHNTC和UMSFT&lt;/p&gt;
+&lt;p&gt;两种无监督的方法，来自同一个实验室，但好像没在代码库中找到这两个网络的代码&lt;/p&gt;
+&lt;h1 id=&#34;实验范式&#34;&gt;实验范式:
+&lt;/h1&gt;&lt;p&gt;很多论文都是遵从这篇论文中的实验范式：Model-Guided Deep Hyperspectral Image Super-Resolution&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://DevDreamerCB.github.io/index.assets/image-20250527151611333.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250527151611333&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>CB</title>
         <link>https://DevDreamerCB.github.io/p/cb/</link>
         <pubDate>Sat, 24 May 2025 19:59:11 +0800</pubDate>
