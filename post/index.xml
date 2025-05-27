@@ -16,14 +16,18 @@
         <description>&lt;h2 id=&#34;fusformer&#34;&gt;Fusformer:
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/J-FHu/Fusformer&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/J-FHu/Fusformer&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://DevDreamerCB.github.io/index.assets/image-20250527082852544.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://DevDreamerCB.github.io/p/ms_hs_fusion/index.assets/image-20250527082852544.png&#34;
+	width=&#34;1637&#34;
+	height=&#34;1023&#34;
+	srcset=&#34;https://DevDreamerCB.github.io/p/ms_hs_fusion/index.assets/image-20250527082852544_hu_541a1b2284095f9c.png 480w, https://DevDreamerCB.github.io/p/ms_hs_fusion/index.assets/image-20250527082852544_hu_b493202bf1f52361.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20250527082852544&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;384px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;给了1000轮时候的预训练权重，可以直接测试&lt;/p&gt;
