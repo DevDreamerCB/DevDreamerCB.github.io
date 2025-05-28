@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Fusformer: https://github.com/J-FHu/Fusformer\n给了1000轮时候的预训练权重，可以直接测试\n我自己也有50-500轮的训练权重\n20张固定的CAVE中的图片训练，11张CAVE中的图片测试，10张Harvard图片测试\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Transformer-based Fusformer: https://github.com/J-FHu/Fusformer\n给了1000轮时候的预训练权重，可以直接测试\n我自己也有50-500轮的训练权重\n20张固定的CAVE中的图片训练，11张CAVE中的图片测试，10张Harvard图片测试\n">
 <title>MS_HS_fusion</title>
 
 <link rel='canonical' href='https://DevDreamerCB.github.io/p/ms_hs_fusion/'>
 
 <link rel="stylesheet" href="/scss/style.min.f35053f7c622077c7390cc43e75a1e8a8bd6e160b6dd06a3da2b85ecbbd75b76.css"><meta property='og:title' content="MS_HS_fusion">
-<meta property='og:description' content="Fusformer: https://github.com/J-FHu/Fusformer\n给了1000轮时候的预训练权重，可以直接测试\n我自己也有50-500轮的训练权重\n20张固定的CAVE中的图片训练，11张CAVE中的图片测试，10张Harvard图片测试\n">
+<meta property='og:description' content="Transformer-based Fusformer: https://github.com/J-FHu/Fusformer\n给了1000轮时候的预训练权重，可以直接测试\n我自己也有50-500轮的训练权重\n20张固定的CAVE中的图片训练，11张CAVE中的图片测试，10张Harvard图片测试\n">
 <meta property='og:url' content='https://DevDreamerCB.github.io/p/ms_hs_fusion/'>
 <meta property='og:site_name' content='陈博'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-05-26T20:17:24&#43;08:00'/><meta property='article:modified_time' content='2025-05-26T20:17:24&#43;08:00'/>
 <meta name="twitter:title" content="MS_HS_fusion">
-<meta name="twitter:description" content="Fusformer: https://github.com/J-FHu/Fusformer\n给了1000轮时候的预训练权重，可以直接测试\n我自己也有50-500轮的训练权重\n20张固定的CAVE中的图片训练，11张CAVE中的图片测试，10张Harvard图片测试\n">
+<meta name="twitter:description" content="Transformer-based Fusformer: https://github.com/J-FHu/Fusformer\n给了1000轮时候的预训练权重，可以直接测试\n我自己也有50-500轮的训练权重\n20张固定的CAVE中的图片训练，11张CAVE中的图片测试，10张Harvard图片测试\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -299,6 +299,11 @@
     <li><a href="#dctransformer">DCTransformer:</a></li>
     <li><a href="#ngst-net">NGST-Net:</a></li>
     <li><a href="#mimo-sst">MIMO-SST</a></li>
+    <li><a href="#uhntc和umsft">uHNTC和UMSFT</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#guidednet">GuidedNet:</a></li>
   </ol>
 </nav>
         </div>
@@ -370,7 +375,8 @@
     <section class="article-content">
     
     
-    <h2 id="fusformer">Fusformer:
+    <h1 id="transformer-based">Transformer-based
+</h1><h2 id="fusformer">Fusformer:
 </h2><p><a class="link" href="https://github.com/J-FHu/Fusformer"  target="_blank" rel="noopener"
     >https://github.com/J-FHu/Fusformer</a></p>
 <p><img src="/p/ms_hs_fusion/index.assets/image-20250527082852544.png"
@@ -393,14 +399,18 @@
 <h2 id="msst-net">MSST-Net:
 </h2><p><a class="link" href="https://github.com/jx-mzc/MSST-Net"  target="_blank" rel="noopener"
     >https://github.com/jx-mzc/MSST-Net</a></p>
-<p><img src="/index.assets/image-20250527083816619.png"
-	
-	
-	
+<p><img src="/p/ms_hs_fusion/index.assets/image-20250527083816619.png"
+	width="1514"
+	height="854"
+	srcset="/p/ms_hs_fusion/index.assets/image-20250527083816619_hu_b549835c36979d3f.png 480w, /p/ms_hs_fusion/index.assets/image-20250527083816619_hu_c8b2576727706a11.png 1024w"
 	loading="lazy"
 	
 		alt="image-20250527083816619"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="425px"
 	
 ></p>
 <p>同时提取空间信息和光谱信息</p>
@@ -409,24 +419,32 @@
 <h2 id="psrt">PSRT:
 </h2><p><a class="link" href="https://github.com/shangqideng/PSRT?tab=readme-ov-file"  target="_blank" rel="noopener"
     >https://github.com/shangqideng/PSRT?tab=readme-ov-file</a></p>
-<p><img src="/index.assets/image-20250527082353833.png"
-	
-	
-	
+<p><img src="/p/ms_hs_fusion/index.assets/image-20250527082353833.png"
+	width="1707"
+	height="579"
+	srcset="/p/ms_hs_fusion/index.assets/image-20250527082353833_hu_ed2b54f860990503.png 480w, /p/ms_hs_fusion/index.assets/image-20250527082353833_hu_731cce155e1b4cb1.png 1024w"
 	loading="lazy"
 	
 		alt="image-20250527082353833"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="294"
+		data-flex-basis="707px"
+	
 ></p>
-<p><img src="/index.assets/image-20250527082755747.png"
-	
-	
-	
+<p><img src="/p/ms_hs_fusion/index.assets/image-20250527082755747.png"
+	width="1707"
+	height="618"
+	srcset="/p/ms_hs_fusion/index.assets/image-20250527082755747_hu_47cb19ace785f970.png 480w, /p/ms_hs_fusion/index.assets/image-20250527082755747_hu_f07a4a94d0e6b0a2.png 1024w"
 	loading="lazy"
 	
 		alt="image-20250527082755747"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="276"
+		data-flex-basis="662px"
 	
 ></p>
 <p>仓库给了训练好的权重，应该可以直接测试</p>
@@ -437,14 +455,18 @@
 <h2 id="hypertransformer">HyperTransformer:
 </h2><p><a class="link" href="https://github.com/wgcban/HyperTransformer"  target="_blank" rel="noopener"
     >https://github.com/wgcban/HyperTransformer</a></p>
-<p><img src="/index.assets/image-20250527111224376.png"
-	
-	
-	
+<p><img src="/p/ms_hs_fusion/index.assets/image-20250527111224376.png"
+	width="1298"
+	height="893"
+	srcset="/p/ms_hs_fusion/index.assets/image-20250527111224376_hu_4e3af3dc38a518d6.png 480w, /p/ms_hs_fusion/index.assets/image-20250527111224376_hu_94beb7535806223a.png 1024w"
 	loading="lazy"
 	
 		alt="image-20250527111224376"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="145"
+		data-flex-basis="348px"
 	
 ></p>
 <p>使用纹理特性，空间信息和光谱信息的交互，</p>
@@ -454,50 +476,66 @@
 <h2 id="mct-net">MCT-Net:
 </h2><p><a class="link" href="https://github.com/wxy11-27/MCT-Net"  target="_blank" rel="noopener"
     >https://github.com/wxy11-27/MCT-Net</a></p>
-<p><img src="/index.assets/image-20250527145026403.png"
-	
-	
-	
+<p><img src="/p/ms_hs_fusion/index.assets/image-20250527145026403.png"
+	width="1398"
+	height="753"
+	srcset="/p/ms_hs_fusion/index.assets/image-20250527145026403_hu_148c3708aa2023c9.png 480w, /p/ms_hs_fusion/index.assets/image-20250527145026403_hu_87288adb17b41c1b.png 1024w"
 	loading="lazy"
 	
 		alt="image-20250527145026403"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="185"
+		data-flex-basis="445px"
+	
 ></p>
 <p>空间信息和光谱信息的交互，模型结构比较复杂，参数量巨大</p>
-<p><img src="/index.assets/image-20250527145204944.png"
-	
-	
-	
+<p><img src="/p/ms_hs_fusion/index.assets/image-20250527145204944.png"
+	width="690"
+	height="320"
+	srcset="/p/ms_hs_fusion/index.assets/image-20250527145204944_hu_81ccc026d89d033b.png 480w, /p/ms_hs_fusion/index.assets/image-20250527145204944_hu_a9c1b8ada320869e.png 1024w"
 	loading="lazy"
 	
 		alt="image-20250527145204944"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="215"
+		data-flex-basis="517px"
 	
 ></p>
 <p>没有给模型权重，数据集并非CAVE和Harvard</p>
 <h2 id="dctransformer">DCTransformer:
 </h2><p><a class="link" href="https://github.com/qingma2016/DCTransformer"  target="_blank" rel="noopener"
     >https://github.com/qingma2016/DCTransformer</a></p>
-<p><img src="/index.assets/image-20250527152110485.png"
-	
-	
-	
+<p><img src="/p/ms_hs_fusion/index.assets/image-20250527152110485.png"
+	width="1299"
+	height="576"
+	srcset="/p/ms_hs_fusion/index.assets/image-20250527152110485_hu_ac9255e6a346c56c.png 480w, /p/ms_hs_fusion/index.assets/image-20250527152110485_hu_d86f7912315f25f1.png 1024w"
 	loading="lazy"
 	
 		alt="image-20250527152110485"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="225"
+		data-flex-basis="541px"
+	
 ></p>
 <p>训练、测试要两张卡（？）</p>
-<p><img src="/index.assets/image-20250527152220089.png"
-	
-	
-	
+<p><img src="/p/ms_hs_fusion/index.assets/image-20250527152220089.png"
+	width="897"
+	height="329"
+	srcset="/p/ms_hs_fusion/index.assets/image-20250527152220089_hu_70dd282aace8e680.png 480w, /p/ms_hs_fusion/index.assets/image-20250527152220089_hu_c190a01cf440b1c1.png 1024w"
 	loading="lazy"
 	
 		alt="image-20250527152220089"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="272"
+		data-flex-basis="654px"
 	
 ></p>
 <p>采用swin-Transformer的block</p>
@@ -505,53 +543,88 @@
 <h2 id="ngst-net">NGST-Net:
 </h2><p><a class="link" href="https://github.com/zsspo/NGST_fusion"  target="_blank" rel="noopener"
     >https://github.com/zsspo/NGST_fusion</a></p>
-<p><img src="/index.assets/image-20250527154838714.png"
-	
-	
-	
+<p><img src="/p/ms_hs_fusion/index.assets/image-20250527154838714.png"
+	width="1209"
+	height="888"
+	srcset="/p/ms_hs_fusion/index.assets/image-20250527154838714_hu_de0427f7cf4ddae7.png 480w, /p/ms_hs_fusion/index.assets/image-20250527154838714_hu_95fba9047cdefee4.png 1024w"
 	loading="lazy"
 	
 		alt="image-20250527154838714"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="136"
+		data-flex-basis="326px"
 	
 ></p>
 <p>基于swin-Transformer，只有模型代码，没有给出训练、测试代码，数据集倒是能匹配上</p>
 <h2 id="mimo-sst">MIMO-SST
 </h2><p><a class="link" href="https://github.com/Freelancefangjian/MIMO-SST"  target="_blank" rel="noopener"
     >https://github.com/Freelancefangjian/MIMO-SST</a></p>
-<p><img src="/index.assets/image-20250527160022748.png"
-	
-	
-	
+<p><img src="/p/ms_hs_fusion/index.assets/image-20250527160022748.png"
+	width="1341"
+	height="903"
+	srcset="/p/ms_hs_fusion/index.assets/image-20250527160022748_hu_4381f8ab81298b97.png 480w, /p/ms_hs_fusion/index.assets/image-20250527160022748_hu_f257df733b341568.png 1024w"
 	loading="lazy"
 	
 		alt="image-20250527160022748"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="148"
+		data-flex-basis="356px"
+	
 ></p>
 <p>数据集有CAVE，但无Harvard，混合空间信息和光谱信息的Transformer</p>
-<p><img src="/index.assets/image-20250527160214457.png"
-	
-	
-	
+<p><img src="/p/ms_hs_fusion/index.assets/image-20250527160214457.png"
+	width="1170"
+	height="231"
+	srcset="/p/ms_hs_fusion/index.assets/image-20250527160214457_hu_8cbe75dee76201c3.png 480w, /p/ms_hs_fusion/index.assets/image-20250527160214457_hu_acda859241380374.png 1024w"
 	loading="lazy"
 	
 		alt="image-20250527160214457"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="506"
+		data-flex-basis="1215px"
+	
 ></p>
-<p>uHNTC和UMSFT</p>
+<h2 id="uhntc和umsft">uHNTC和UMSFT
+</h2><p><a class="link" href="https://github.com/Caoxuheng/HIFtool"  target="_blank" rel="noopener"
+    >https://github.com/Caoxuheng/HIFtool</a></p>
 <p>两种无监督的方法，来自同一个实验室，但好像没在代码库中找到这两个网络的代码</p>
+<h1 id="cnn-based">CNN-based
+</h1><h2 id="guidednet">GuidedNet:
+</h2><p>有代码，没权重，且为tensorflow</p>
+<p><img src="/p/ms_hs_fusion/index.assets/image-20250528093627189.png"
+	width="1134"
+	height="585"
+	srcset="/p/ms_hs_fusion/index.assets/image-20250528093627189_hu_6a49258e300f74bf.png 480w, /p/ms_hs_fusion/index.assets/image-20250528093627189_hu_f0dfb017f2c7d824.png 1024w"
+	loading="lazy"
+	
+		alt="image-20250528093627189"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="193"
+		data-flex-basis="465px"
+	
+></p>
 <h1 id="实验范式">实验范式:
 </h1><p>很多论文都是遵从这篇论文中的实验范式：Model-Guided Deep Hyperspectral Image Super-Resolution</p>
-<p><img src="/index.assets/image-20250527151611333.png"
-	
-	
-	
+<p><img src="/p/ms_hs_fusion/index.assets/image-20250527151611333.png"
+	width="459"
+	height="597"
+	srcset="/p/ms_hs_fusion/index.assets/image-20250527151611333_hu_f34585797b0e68c4.png 480w, /p/ms_hs_fusion/index.assets/image-20250527151611333_hu_53f53a42ff7a8ae3.png 1024w"
 	loading="lazy"
 	
 		alt="image-20250527151611333"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="76"
+		data-flex-basis="184px"
 	
 ></p>
 
