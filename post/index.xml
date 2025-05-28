@@ -13,7 +13,10 @@
         <pubDate>Mon, 26 May 2025 20:17:24 +0800</pubDate>
         
         <guid>https://DevDreamerCB.github.io/p/ms_hs_fusion/</guid>
-        <description>&lt;h1 id=&#34;transformer-based&#34;&gt;Transformer-based
+        <description>&lt;h1 id=&#34;cave数据集&#34;&gt;CAVE数据集
+&lt;/h1&gt;&lt;p&gt;31张png图片，维度均为512x512x1，合到一起为GT&lt;/p&gt;
+&lt;p&gt;1张bmp图片，维度为512x512x3&lt;/p&gt;
+&lt;h1 id=&#34;transformer-based&#34;&gt;Transformer-based
 &lt;/h1&gt;&lt;h2 id=&#34;fusformer&#34;&gt;Fusformer:
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/J-FHu/Fusformer&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/J-FHu/Fusformer&lt;/a&gt;&lt;/p&gt;
@@ -23,7 +26,7 @@
 	srcset=&#34;https://DevDreamerCB.github.io/p/ms_hs_fusion/index.assets/image-20250527082852544_hu_541a1b2284095f9c.png 480w, https://DevDreamerCB.github.io/p/ms_hs_fusion/index.assets/image-20250527082852544_hu_b493202bf1f52361.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;image-20250527082852544&#34;
+		alt=&#34;Fusformer网络结构图&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -43,7 +46,7 @@
 	srcset=&#34;https://DevDreamerCB.github.io/p/ms_hs_fusion/index.assets/image-20250527083816619_hu_b549835c36979d3f.png 480w, https://DevDreamerCB.github.io/p/ms_hs_fusion/index.assets/image-20250527083816619_hu_c8b2576727706a11.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;image-20250527083816619&#34;
+		alt=&#34;网络结构&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -52,6 +55,20 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;同时提取空间信息和光谱信息&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://DevDreamerCB.github.io/p/ms_hs_fusion/index.assets/image-20250528170122518.png&#34;
+	width=&#34;446&#34;
+	height=&#34;297&#34;
+	srcset=&#34;https://DevDreamerCB.github.io/p/ms_hs_fusion/index.assets/image-20250528170122518_hu_60c0317344195bd5.png 480w, https://DevDreamerCB.github.io/p/ms_hs_fusion/index.assets/image-20250528170122518_hu_99d30e679ae77c47.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;数据集处理&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;p&gt;没有给权重，但给了训练代码，&lt;strong&gt;参数量巨大&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;CAVE上预训练，分别在CAVE和Harvard上微调&lt;/p&gt;
 &lt;h2 id=&#34;psrt&#34;&gt;PSRT:
@@ -63,7 +80,7 @@
 	srcset=&#34;https://DevDreamerCB.github.io/p/ms_hs_fusion/index.assets/image-20250527082353833_hu_ed2b54f860990503.png 480w, https://DevDreamerCB.github.io/p/ms_hs_fusion/index.assets/image-20250527082353833_hu_731cce155e1b4cb1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;image-20250527082353833&#34;
+		alt=&#34;PSRT网络结构&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -71,13 +88,31 @@
 		data-flex-basis=&#34;707px&#34;
 	
 &gt;&lt;/p&gt;
+&lt;p&gt;输入为上采样后的LR-HSI（上采样到与输出一个分辨率）和HR-MSI，然后整个模型学习这个差异。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;亮点：SaR机制&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://DevDreamerCB.github.io/p/ms_hs_fusion/index.assets/image-20250528113622400.png&#34;
+	width=&#34;582&#34;
+	height=&#34;765&#34;
+	srcset=&#34;https://DevDreamerCB.github.io/p/ms_hs_fusion/index.assets/image-20250528113622400_hu_580a4b0fbbf9ec78.png 480w, https://DevDreamerCB.github.io/p/ms_hs_fusion/index.assets/image-20250528113622400_hu_ddf49c36686d5b75.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;SaR&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;76&#34;
+		data-flex-basis=&#34;182px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;借鉴swin-Transformer的思想，但是原始方法对边界像素进行了掩码处理，边界建模能力变差，因此，新方法通过改变图像patch的顺序，无需掩码，即可关注窗与窗之间的相关性。SaR机制被用在了每一个block中。&lt;/p&gt;
+&lt;p&gt;每一个Block的结构：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://DevDreamerCB.github.io/p/ms_hs_fusion/index.assets/image-20250527082755747.png&#34;
 	width=&#34;1707&#34;
 	height=&#34;618&#34;
 	srcset=&#34;https://DevDreamerCB.github.io/p/ms_hs_fusion/index.assets/image-20250527082755747_hu_47cb19ace785f970.png 480w, https://DevDreamerCB.github.io/p/ms_hs_fusion/index.assets/image-20250527082755747_hu_f07a4a94d0e6b0a2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;image-20250527082755747&#34;
+		alt=&#34;PSRT block&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -85,9 +120,15 @@
 		data-flex-basis=&#34;662px&#34;
 	
 &gt;&lt;/p&gt;
+&lt;p&gt;原始图像做一次encode，有局部信息，然后交换顺序做一次encode，就有了全局信息，最后在换回来做一次encoder，再获得局部信息。&lt;/p&gt;
 &lt;p&gt;仓库给了训练好的权重，应该可以直接测试&lt;/p&gt;
 &lt;p&gt;CAVE上固定20张图片训练，11张图片测试&lt;/p&gt;
-&lt;p&gt;Harvard上固定10张图片训练，10张图片测试&lt;/p&gt;
+&lt;p&gt;Harvard数据集上有裁剪&lt;/p&gt;
+&lt;p&gt;数据集构造：&lt;/p&gt;
+&lt;p&gt;每张GT切成可以重叠的块（共3920块）：64x64x31&lt;/p&gt;
+&lt;p&gt;高斯模糊加上下采样，得到模拟的LR-HSI（16x16x31）&lt;/p&gt;
+&lt;p&gt;用光谱响应函数得到HR-MSI（64x64x3）&lt;/p&gt;
+&lt;p&gt;80%用于训练，20%用于测试&lt;/p&gt;
 &lt;h2 id=&#34;hmf-former&#34;&gt;HMF-Former:
 &lt;/h2&gt;&lt;p&gt;无代码&lt;/p&gt;
 &lt;h2 id=&#34;hypertransformer&#34;&gt;HyperTransformer:
