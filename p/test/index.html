@@ -509,22 +509,31 @@
 </script>
 <div id="particles-js"></div>
 
-<script src=https://DevDreamerCB.github.io/background/particles.min.js></script>
+<script src="https://DevDreamerCB.github.io/background/particles.min.js"></script>
 <script>
-  particlesJS.load('particles-js', "https://DevDreamerCB.github.io/background/particlesjs-config.json", function() {
+  particlesJS.load('particles-js', 'https:\/\/DevDreamerCB.github.io\/background\/particlesjs-config.json', function() {
     console.log('particles.js loaded - callback');
   });
 </script>
 
 <style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
   #particles-js {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+     
+    height: 100vh;
     z-index: -1;
   }
 </style>
+
 
 <style>
   @font-face {
